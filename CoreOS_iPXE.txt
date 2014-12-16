@@ -1,0 +1,6 @@
+#!ipxe
+
+set base-url http://stable.release.core-os.net/amd64-usr/current
+kernel ${base-url}/coreos_production_pxe.vmlinuz cloud-config-url=http://169.254.169.254/2014-09-12/coreos-init sshkey="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCnvpIGmkxl0khisYzCHD02Kveb+Q0bqqaqSuUt958YaPT4bNl+T/Rra5K8/hFNFGMMzQk4+7jmhPlVeahxxdSJMpd2sZQM6dJMiievH8LuQvsRtrhlHzVJAJoX8zu2PxQfxTWiLFrp3uzdkFvUht98lPNdu4msG5rDK0FyO3vMWr+44SOl4N9zbkmdDhd2GkETYObLbQ1XifVimiYJkqFORL7LRRKh+kNGmz0QRS2HaBdjOi+Z3fdbj13QOmNbrO8BQnDjaOAjPWNRblO/mt76gSutOutpd+8/MUO1rf0uASrtA/UvTeCnSV+IzRN8xSrf4oGebQiK4AAJRLFqeQQZ paul@trickbooter.com"
+initrd ${base-url}/coreos_production_pxe_image.cpio.gz
+boot
